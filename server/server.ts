@@ -6,19 +6,24 @@ const app = express()
 
 const port = 4000
 
+// [TODO] Clear cache occasionally
 const get = _.memoize(axios.get)
 
-// path for all api routes
 app.get('/api', async (req, res) => {
-    const example = await get(
-        'https://api.github.com/search/repositories?page=3&per_page=100',
-        {
-            params: {
-                q: 'well hello there',
-            },
-        }
-    )
-    res.send(example.data)
+    try {
+        const example = await get(
+            'https://api.github.com/search/repositories',
+            {
+                params: {
+                    q: req.query.query,
+                },
+            }
+        )
+        res.send(example.data)
+    } catch (e) {
+        console.log('error: ', e)
+        res.send(e)
+    }
 })
 
 app.listen(port, () => {
