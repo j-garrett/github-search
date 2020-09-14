@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './css/App.css'
 import Home from './Home'
 import Details from './Details'
+import NoMatch from './NoMatch'
 
 function App() {
     return (
@@ -26,15 +27,15 @@ function App() {
                             </ul>
                         </nav>
                     </header>
-
-                    {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
                     <Switch>
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
                         <Route path="/details">
                             <Details />
                         </Route>
-                        <Route path="/">
-                            <Home />
+                        <Route path="*">
+                            <NoMatch />
                         </Route>
                     </Switch>
                 </div>
