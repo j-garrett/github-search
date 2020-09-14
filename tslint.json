@@ -1,0 +1,10 @@
+{
+    "defaultSeverity": "warn",
+    "exclude": ["node_modules"],
+    "extends": ["tslint:recommended"],
+    "jsRules": {},
+    "rules": {
+        "trailing-comma": [false]
+    },
+    "rulesDirectory": []
+}

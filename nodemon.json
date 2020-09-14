@@ -1,0 +1,6 @@
+{
+    "exec": "ts-node server/server.ts",
+    "ext": "ts",
+    "ignore": ["server/**/__tests__/*"],
+    "watch": ["server"]
+}
