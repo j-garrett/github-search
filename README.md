@@ -6,6 +6,24 @@
 3. `npm start`
 4. The client will now be reachable on localhost:3000 and the api on localhost:4000
 
+Note that this will be the dev environment. If you would like to deploy, look below at the readme portion saved from create-react-app
+
+## Testing
+
+There are currently no tests set up for the server
+
+You can run tests on the client by navigating to client folder and running `npm test` which will start a watcher. If you want to know coverage then use `npm run coverage` from the client folder.
+
+## Contribute
+
+Please fork and create a PR if you would like to contribute. Or just create requests that we can prioritize.
+
+1. 100% test coverage on client
+2. Set up test coverage for server
+3. Input validation
+4. 100% server test coverage
+5. Whatever you can dream up!
+
 ---
 
 ### React Code Exercise
